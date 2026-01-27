@@ -1,0 +1,32 @@
+---
+id: operation
+title: Operation Guide
+sidebar_position: 5
+---
+
+# Operation Guide
+
+## Getting Started
+
+### Initial Setup
+
+1. Charge the device fully before first use
+2. Power on the device
+3. Complete initial configuration wizard
+4. Connect to Wi-Fi network
+
+### Daily Operation
+
+(Detailed operating instructions to be added)
+
+## Image Capture Workflow
+
+1. Select or create patient record
+2. Choose imaging mode (reflectance/fluorescence)
+3. Position device for optimal view
+4. Capture image
+5. Review and save
+
+---
+
+*Content in development*

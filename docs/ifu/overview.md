@@ -1,0 +1,72 @@
+---
+id: overview
+title: Overview
+sidebar_position: 1
+---
+
+# OralEye Instructions For Use
+
+**Document Version:** 1.0.0  
+**Effective Date:** January 2026  
+**Manufacturer:** OralEye, Inc.
+
+---
+
+## Welcome
+
+This document provides comprehensive instructions for the safe and effective use of the OralEye Oral Imaging System.
+
+:::warning Important
+Read all instructions carefully before operating the device. Keep this document accessible for future reference.
+:::
+
+## Document Purpose
+
+This Instructions For Use (IFU) document contains:
+
+- Device description and intended use
+- Safety warnings and precautions
+- Operating instructions
+- Maintenance procedures
+- Troubleshooting guidance
+- Technical specifications
+
+## Intended Users
+
+The OralEye system is intended for use by:
+
+- Licensed dentists
+- Dental hygienists
+- Trained clinical staff under supervision of licensed practitioners
+
+## Quick Start
+
+For experienced users familiar with oral imaging systems:
+
+1. **Power On:** Press the power button and wait for system initialization
+2. **Patient Setup:** Enter or select patient information
+3. **Capture Images:** Follow the on-screen guidance for image acquisition
+4. **Review:** Examine captured images for quality
+5. **Save:** Store images to patient record
+
+:::tip
+For detailed instructions, refer to the [Operation Guide](./operation.md).
+:::
+
+## Regulatory Status
+
+- **FDA Status:** [Pending/510(k) Cleared/Exempt]
+- **Regulatory Class:** Class II Medical Device
+- **Product Code:** [TBD]
+
+## Support
+
+For technical support or questions:
+
+- **Email:** support@oraleye.ai
+- **Phone:** [Contact Number]
+- **Website:** https://oraleye.ai/support
+
+---
+
+*Document controlled under ISO 13485:2016 Quality Management System*

@@ -6,24 +6,41 @@ website:
   title: "OralEye Documentation"
   site-url: "https://image-data-management.github.io/OralEye-Docs"
   repo-url: "https://github.com/image-data-management/OralEye-Docs"
+  repo-actions: [edit, issue]
+  search: true
+  reader-mode: false
   
   navbar:
     logo: images/logo.png
     logo-href: index.qmd
     title: "OralEye"
     left:
+      - text: "Home"
+        file: index.qmd
       - text: "Instructions For Use"
         file: ifu/index.qmd
       - text: "Regulatory"
         file: regulatory/index.qmd
+      - text: "Tutorials"
+        file: tutorials/index.qmd
     right:
+      - text: "Contribute"
+        file: contribute.qmd
       - icon: github
         href: https://github.com/image-data-management/OralEye-Docs
         
   sidebar:
+    - title: "Site"
+      style: "docked"
+      collapse-level: 0
+      contents:
+        - index.qmd
+
     - title: "Instructions For Use"
       style: "docked"
+      collapse-level: 0
       contents:
+        - ifu/index.qmd
         - section: "Getting Started"
           contents:
             - ifu/overview.qmd
@@ -40,10 +57,18 @@ website:
             - ifu/technical-specs.qmd
     
     - title: "Regulatory"
+      collapse-level: 0
       contents:
+        - regulatory/index.qmd
         - regulatory/fda-clearance.qmd
         - regulatory/symbols.qmd
         - regulatory/version-history.qmd
+
+    - title: "Tutorials"
+      style: "docked"
+      collapse-level: 0
+      contents:
+        - tutorials/index.qmd
   
   page-footer:
     left: "Copyright © 2026 OralEye. All rights reserved."
@@ -54,15 +79,24 @@ website:
 format:
   html:
     theme: 
-      - cosmo
+      - flatly
       - custom.scss
-    toc: true
-    toc-depth: 3
+    grid:
+      sidebar-width: 320px
+      body-width: 980px
+      margin-width: 320px
+    toc: false
     number-sections: true
     code-copy: true
     code-overflow: wrap
     smooth-scroll: true
     link-external-newwindow: true
+    anchor-sections: true
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
   pdf:
     documentclass: article
@@ -83,3 +117,10 @@ format:
 
 execute:
   freeze: auto
+  echo: false
+  warning: false
+  error: false
+  message: false
+  cache: true
+  cache-path: _cache
+  cache-scope: global

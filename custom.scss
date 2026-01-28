@@ -6,10 +6,10 @@ $warning: #f59e0b;
 $danger: #ef4444;
 $info: #06b6d4;
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $headings-font-weight: 600;
 
-$navbar-bg: #1e293b;
+$navbar-bg: #1e3a8a;
 $navbar-fg: #f1f5f9;
 
 /*-- scss:rules --*/
@@ -17,7 +17,7 @@ $navbar-fg: #f1f5f9;
 // Navbar styling
 .navbar {
   background-color: $navbar-bg !important;
-  border-bottom: 1px solid #334155;
+  border-bottom: 1px solid rgba(219, 234, 254, 0.18);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
@@ -30,11 +30,63 @@ $navbar-fg: #f1f5f9;
   color: #cbd5e1 !important;
 }
 
+// Make top nav feel like "tabs"
+.navbar-nav .nav-link {
+  padding: 0.45rem 0.8rem;
+  margin: 0 0.15rem;
+  border-radius: 0.6rem;
+  border: 1px solid transparent;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link[aria-current="page"] {
+  background: rgba(241, 245, 249, 0.12);
+  border-color: rgba(203, 213, 225, 0.25);
+  color: #ffffff !important;
+}
+
+// Right-side "On this page" panel (only when TOC is in the margin sidebar)
+#quarto-margin-sidebar nav#TOC,
+#quarto-margin-sidebar .toc {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 0.8rem;
+  padding: 0.75rem 0.85rem;
+}
+
+#quarto-margin-sidebar nav#TOC a,
+#quarto-margin-sidebar .toc a {
+  text-decoration: none;
+}
+
+#quarto-margin-sidebar nav#TOC a:hover,
+#quarto-margin-sidebar .toc a:hover {
+  text-decoration: underline;
+}
+
+// Margin notes / captions
+.column-margin {
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.92em;
+  line-height: 1.35;
+}
+
 // Logo styling
 .navbar-brand img {
   max-height: 40px;
   margin-right: 10px;
-  filter: brightness(0) invert(1);
+  filter: none;
+}
+
+// If the logo image has a light background, make it look like a deliberate mark.
+.navbar-brand-logo img.navbar-logo {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid rgba(226, 232, 240, 0.6);
 }
 
 // Callout boxes
@@ -107,4 +159,27 @@ td {
   .page-break-after {
     page-break-after: always;
   }
+}
+
+// Left navigation sidebar (quarto-sidebar)
+#quarto-sidebar.sidebar-navigation {
+  background: #eff6ff;
+  border-right: 1px solid #dbeafe;
+}
+
+#quarto-sidebar .sidebar-item-container {
+  border-radius: 0.5rem;
+}
+
+#quarto-sidebar a.sidebar-link {
+  color: #0f172a;
+}
+
+#quarto-sidebar a.sidebar-link:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+#quarto-sidebar a.sidebar-link.active {
+  background: rgba(37, 99, 235, 0.14);
+  border-left: 3px solid rgba(37, 99, 235, 0.7);
 }

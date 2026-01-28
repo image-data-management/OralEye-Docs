@@ -1,0 +1,70 @@
+---
+title: "How to Contribute"
+toc: false
+---
+
+This documentation is designed to be easy to review and improve.
+
+If you are a clinician or reviewer, you can contribute without installing any tools.
+
+## Option 1: Report an issue (recommended for feedback)
+
+On any page, use the **Issue** / **Report an issue** link.
+
+- This opens a GitHub Issue where you can describe the change you want.
+- This is best for requests, questions, or feedback that needs discussion.
+
+## Option 2: Suggest a direct edit in the browser
+
+On any page, use the **Edit** link.
+
+This will open the corresponding source file (a `.qmd` file) on GitHub.
+
+Typical flow:
+
+1. Click **Edit**.
+2. Make a small change (typo fix, wording clarification, etc.).
+3. GitHub will prompt you to create a **new branch** and open a **Pull Request (PR)**.
+4. Submit the PR.
+
+A maintainer will review the PR and merge it when approved.
+
+## Option 3: Edit locally (for larger changes)
+
+If you are comfortable with developer tools:
+
+1. Clone the repository.
+2. Edit `.qmd` files.
+3. Preview locally with `quarto preview`.
+4. Open a PR.
+
+## What happens after you contribute
+
+- Proposed changes are reviewed via Pull Requests.
+- The public website is published from version tags (e.g. `v0.2.0`) rather than every merge.
+
+## Tips for making good edits
+
+- Keep changes small and focused.
+- Prefer plain language.
+- For IFU/safety content: keep wording unambiguous and consistent.
+
+## Style snippets
+
+### Figure with a standard caption
+
+```markdown
+![](images/example.png){fig-alt="Example image" fig-cap="Figure: Example caption."}
+```
+
+### Figure with a margin note (recommended for short callouts)
+
+Use a margin note when you want a small explanation beside the figure (e.g., what to look for).
+
+```markdown
+![](images/example.png){fig-alt="Example image" fig-cap="Figure: Example caption."}
+
+::: {.column-margin}
+Key point: Describe what to look for in the image.
+:::
+```

@@ -1,5 +1,6 @@
 ---
 title: "OralEye Documentation"
+toc: false
 ---
 
 # Welcome to OralEye Documentation

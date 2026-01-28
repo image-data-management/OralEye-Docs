@@ -1,0 +1,14 @@
+---
+title: "Tutorials"
+toc: false
+---
+
+This section will contain task-oriented tutorials (e.g., setup, imaging workflow, maintenance checks).
+
+## Planned tutorials
+
+- Getting started
+- Capturing an image set
+- Cleaning and maintenance
+- Exporting and recordkeeping
+

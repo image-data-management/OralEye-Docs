@@ -1,1 +1,0 @@
-Sitemap: https://image-data-management.github.io/OralEye-Docs/sitemap.xml

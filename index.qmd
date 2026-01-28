@@ -1,0 +1,50 @@
+---
+title: "OralEye Documentation"
+---
+
+# Welcome to OralEye Documentation
+
+Official Instructions For Use (IFU) for the OralEye Oral Imaging System.
+
+::: {.callout-important}
+## Important
+
+This device is intended for use by trained dental professionals only. Read all instructions before use.
+:::
+
+## Quick Navigation
+
+### 📘 Getting Started
+- [Overview](ifu/overview.qmd) - Introduction to the OralEye system
+- [Intended Use](ifu/intended-use.qmd) - Device purpose and indications
+- [Safety Information](ifu/safety.qmd) - Critical safety instructions
+
+### 🔧 Operation
+- [Device Description](ifu/device-description.qmd) - System components
+- [Operation Guide](ifu/operation.qmd) - How to use the device
+- [Troubleshooting](ifu/troubleshooting.qmd) - Common issues and solutions
+
+### 📋 Regulatory
+- [FDA Status](regulatory/fda-clearance.qmd) - Regulatory information
+- [Version History](regulatory/version-history.qmd) - Document revisions
+
+## Document Information
+
+**Current Version:** 1.0.0  
+**Last Updated:** January 2026  
+**Document Status:** Draft
+
+## Support
+
+Need help? Contact our support team:
+
+- **Email:** support@oraleye.ai
+- **Website:** <https://oraleye.ai>
+
+## PDF Download
+
+[Download Complete IFU as PDF](OralEye-IFU.pdf) *(Available after build)*
+
+---
+
+*This documentation is maintained under ISO 13485:2016 Quality Management System*

@@ -1,0 +1,37 @@
+---
+title: "Version History"
+---
+
+# Document Version History
+
+## Revision Control
+
+This document is maintained under version control to ensure traceability and compliance with regulatory requirements.
+
+## Version History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|----------|
+| 1.0.0 | TBD | IDM Team | Initial release |
+
+## Document Control
+
+- **Document Number:** IFU-001
+- **Current Version:** 1.0.0
+- **Effective Date:** TBD
+- **Next Review Date:** TBD
+
+## Approval
+
+(Approval signatures and dates to be added)
+
+---
+
+::: {.callout-note}
+## Change Management
+All changes to this document follow our quality management system procedures and are reviewed for regulatory impact.
+:::
+
+## Archive
+
+Previous versions of this document are maintained in accordance with regulatory requirements and are available upon request.

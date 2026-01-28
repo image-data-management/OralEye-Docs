@@ -1,0 +1,30 @@
+---
+title: "FDA Clearance"
+---
+
+# FDA Clearance
+
+## Regulatory Status
+
+::: {.callout-important}
+## Development Status
+The OralEye system is currently under development. FDA clearance status to be determined.
+:::
+
+## Device Classification
+
+- **Device Type:** Intraoral Imaging System
+- **Classification:** TBD
+- **Product Code:** TBD
+
+## Intended Use Statement
+
+See [Intended Use](../ifu/intended-use.qmd) for the complete intended use statement.
+
+## Regulatory Pathway
+
+(Information to be added upon FDA submission)
+
+---
+
+*This information will be updated as regulatory status changes.*

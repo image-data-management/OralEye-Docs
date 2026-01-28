@@ -1,0 +1,39 @@
+---
+title: "Symbols and Labels"
+---
+
+# Symbols and Labels
+
+## Device Symbols
+
+### Safety Symbols
+
+| Symbol | Meaning |
+|--------|----------|
+| ⚠️ | Warning/Caution |
+| ⚡ | Electrical Hazard |
+| ♻️ | Recyclable |
+| 🚫 | Do Not Dispose in Regular Waste |
+
+### Regulatory Symbols
+
+| Symbol | Meaning |
+|--------|----------|
+| CE | CE Mark (if applicable) |
+| Ⓡ | Manufacturer |
+| 📅 | Date of Manufacture |
+| SN | Serial Number |
+
+## Label Information
+
+Device labels include:
+
+- Manufacturer name and address
+- Device model and serial number
+- Manufacturing date
+- Applicable standards and certifications
+- Safety warnings
+
+---
+
+*Symbols conform to ISO 15223-1 (Medical Devices Symbols)*

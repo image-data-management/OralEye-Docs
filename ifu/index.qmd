@@ -1,0 +1,50 @@
+---
+title: "Instructions For Use"
+---
+
+# OralEye Instructions For Use
+
+Welcome to the OralEye Instructions For Use documentation. This guide provides comprehensive information about the safe and effective use of the OralEye Intraoral Imaging System.
+
+## Quick Navigation
+
+### Getting Started
+- [Overview and Quick Start](overview.qmd) - Introduction and basic setup
+- [Intended Use](intended-use.qmd) - Device classification and indications
+- [Device Description](device-description.qmd) - System components and features
+
+### Safety & Operation
+- [Safety Information](safety.qmd) - Important safety instructions
+- [Operation Guide](operation.qmd) - Step-by-step operating procedures
+- [Maintenance](maintenance.qmd) - Cleaning and calibration
+
+### Support
+- [Troubleshooting](troubleshooting.qmd) - Common issues and solutions
+- [Technical Specifications](technical-specs.qmd) - Detailed specifications
+
+## Document Information
+
+::: {.callout-note}
+## Current Version
+**Version:** 1.0.0  
+**Effective Date:** TBD  
+**Document Number:** IFU-001
+:::
+
+## Important Notice
+
+::: {.callout-important}
+Read all instructions before using the OralEye system. Keep this document accessible for reference.
+:::
+
+## Support Contact
+
+For technical support or questions:
+
+- **Email:** support@oraleye.ai
+- **Web:** https://oraleye.ai
+- **Phone:** (Contact information TBD)
+
+---
+
+*This document is maintained under version control. For regulatory information, see the [Regulatory section](../regulatory/index.qmd).*

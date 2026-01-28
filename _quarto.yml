@@ -1,0 +1,82 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "OralEye Documentation"
+  site-url: "https://image-data-management.github.io/OralEye-Docs"
+  repo-url: "https://github.com/image-data-management/OralEye-Docs"
+  
+  navbar:
+    logo: images/logo.png
+    title: "OralEye"
+    left:
+      - text: "Instructions For Use"
+        file: ifu/index.qmd
+      - text: "Regulatory"
+        file: regulatory/index.qmd
+    right:
+      - icon: github
+        href: https://github.com/image-data-management/OralEye-Docs
+        
+  sidebar:
+    - title: "Instructions For Use"
+      style: "docked"
+      contents:
+        - section: "Getting Started"
+          contents:
+            - ifu/overview.qmd
+            - ifu/intended-use.qmd
+            - ifu/device-description.qmd
+        - section: "Safety & Operation"
+          contents:
+            - ifu/safety.qmd
+            - ifu/operation.qmd
+            - ifu/maintenance.qmd
+        - section: "Support"
+          contents:
+            - ifu/troubleshooting.qmd
+            - ifu/technical-specs.qmd
+    
+    - title: "Regulatory"
+      contents:
+        - regulatory/fda-clearance.qmd
+        - regulatory/symbols.qmd
+        - regulatory/version-history.qmd
+  
+  page-footer:
+    left: "Copyright © 2026 OralEye. All rights reserved."
+    right: 
+      - text: "Document Version 1.0.0"
+      - text: "Maintained under ISO 13485:2016"
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - custom.scss
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-copy: true
+    code-overflow: wrap
+    
+  pdf:
+    documentclass: article
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    colorlinks: true
+    papersize: letter
+    geometry:
+      - margin=1in
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyhead[L]{OralEye IFU}
+        \fancyhead[R]{Version 1.0.0}
+        \fancyfoot[C]{\thepage}
+
+execute:
+  freeze: auto

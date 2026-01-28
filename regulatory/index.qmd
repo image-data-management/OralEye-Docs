@@ -1,0 +1,34 @@
+---
+title: "Regulatory Information"
+---
+
+# Regulatory Information
+
+## Overview
+
+This section contains regulatory and compliance information for the OralEye Intraoral Imaging System.
+
+## Contents
+
+- [FDA Clearance](fda-clearance.qmd)
+- [Symbols and Labels](symbols.qmd)
+- [Version History](version-history.qmd)
+
+## Quality Management
+
+OralEye is manufactured under an ISO 13485 certified quality management system.
+
+## Contact Information
+
+**Image Data Management, Inc.**
+
+For regulatory inquiries:
+
+- Email: regulatory@oraleye.ai
+- Web: https://oraleye.ai
+
+---
+
+::: {.callout-note}
+For the most current regulatory status, visit our website or contact regulatory affairs.
+:::

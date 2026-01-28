@@ -183,3 +183,163 @@ td {
   background: rgba(37, 99, 235, 0.14);
   border-left: 3px solid rgba(37, 99, 235, 0.7);
 }
+
+// ===========================================
+// Hero Section (home page)
+// ===========================================
+.hero-section {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  margin: -1rem -1rem 2rem -1rem;
+  padding: 3rem 2rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1;
+  color: #ffffff;
+  
+  h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  p {
+    font-size: 1.15rem;
+    color: #e0e7ff;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-decoration: none;
+  }
+  
+  .btn-primary {
+    background: #ffffff;
+    color: #1e3a8a;
+    border: none;
+    
+    &:hover {
+      background: #e0e7ff;
+    }
+  }
+  
+  .btn-outline-light {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+    }
+  }
+}
+
+.hero-image {
+  flex: 0 0 auto;
+  
+  img {
+    max-width: 320px;
+    max-height: 280px;
+    object-fit: contain;
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: #ffffff;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+  
+  .hero-image img {
+    max-width: 240px;
+  }
+}
+
+// ===========================================
+// Card Grid (documentation cards)
+// ===========================================
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.doc-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+  
+  h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+    color: #1e293b;
+  }
+  
+  p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: $primary;
+    font-weight: 600;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ===========================================
+// Support section
+// ===========================================
+.support-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}

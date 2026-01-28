@@ -9,6 +9,7 @@ website:
   
   navbar:
     logo: images/logo.png
+    logo-href: index.qmd
     title: "OralEye"
     left:
       - text: "Instructions For Use"
@@ -60,6 +61,8 @@ format:
     number-sections: true
     code-copy: true
     code-overflow: wrap
+    smooth-scroll: true
+    link-external-newwindow: true
     
   pdf:
     documentclass: article

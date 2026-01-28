@@ -1,0 +1,7 @@
+---
+title: "Documentation"
+---
+
+Internal project documentation and guides.
+
+- [Publishing Method](Publishing-method.md) — How we publish to GitHub Pages

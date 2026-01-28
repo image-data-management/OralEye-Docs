@@ -1,11 +1,27 @@
 ---
 title: "OralEye Documentation"
 toc: false
+page-layout: full
 ---
 
-# Welcome to OralEye Documentation
+::: {.hero-section}
+::: {.hero-content}
+::: {.hero-text}
+# OralEye Oral Imaging System
 
-Official Instructions For Use (IFU) for the OralEye Oral Imaging System.
+Official Instructions For Use and technical documentation for dental professionals.
+
+::: {.hero-cta}
+[Get Started](ifu/overview.qmd){.btn .btn-primary .btn-lg}
+[View Safety Info](ifu/safety.qmd){.btn .btn-outline-light .btn-lg}
+:::
+:::
+
+::: {.hero-image}
+![](images/product-01.png){fig-alt="OralEye imaging device"}
+:::
+:::
+:::
 
 ::: {.callout-important}
 ## Important
@@ -13,38 +29,38 @@ Official Instructions For Use (IFU) for the OralEye Oral Imaging System.
 This device is intended for use by trained dental professionals only. Read all instructions before use.
 :::
 
-## Quick Navigation
+## Documentation
 
-### 📘 Getting Started
-- [Overview](ifu/overview.qmd) - Introduction to the OralEye system
-- [Intended Use](ifu/intended-use.qmd) - Device purpose and indications
-- [Safety Information](ifu/safety.qmd) - Critical safety instructions
+::: {.card-grid}
+::: {.doc-card}
+### 📘 Instructions For Use
+Complete operating instructions, safety information, and maintenance guidance.
 
-### 🔧 Operation
-- [Device Description](ifu/device-description.qmd) - System components
-- [Operation Guide](ifu/operation.qmd) - How to use the device
-- [Troubleshooting](ifu/troubleshooting.qmd) - Common issues and solutions
+[Read IFU →](ifu/index.qmd)
+:::
 
+::: {.doc-card}
 ### 📋 Regulatory
-- [FDA Status](regulatory/fda-clearance.qmd) - Regulatory information
-- [Version History](regulatory/version-history.qmd) - Document revisions
+FDA clearance status, compliance symbols, and document version history.
+
+[View Regulatory →](regulatory/index.qmd)
+:::
+
+::: {.doc-card}
+### 🎓 Tutorials
+Step-by-step guides for common tasks and workflows.
+
+[Browse Tutorials →](tutorials/index.qmd)
+:::
+:::
 
 ## Document Information
 
-**Current Version:** 1.0.0  
-**Last Updated:** January 2026  
-**Document Status:** Draft
+**Current Version:** 1.0.0 | **Last Updated:** January 2026 | **Status:** Draft
 
-## Support
-
-Need help? Contact our support team:
-
-- **Email:** support@oraleye.ai
-- **Website:** <https://oraleye.ai>
-
-## PDF Download
-
-[Download Complete IFU as PDF](OralEye-IFU.pdf) *(Available after build)*
+::: {.support-section}
+**Need help?** Contact support@oraleye.ai or visit [oraleye.ai](https://oraleye.ai)
+:::
 
 ---
 

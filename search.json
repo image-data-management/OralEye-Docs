@@ -1,0 +1,925 @@
+[
+  {
+    "objectID": "tutorials/index.html",
+    "href": "tutorials/index.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "This section will contain task-oriented tutorials (e.g., setup, imaging workflow, maintenance checks).",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html#planned-tutorials",
+    "href": "tutorials/index.html#planned-tutorials",
+    "title": "Tutorials",
+    "section": "1 Planned tutorials",
+    "text": "1 Planned tutorials\n\nGetting started\nCapturing an image set\nCleaning and maintenance\nExporting and recordkeeping",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "docs/Publishing-method.html",
+    "href": "docs/Publishing-method.html",
+    "title": "1 Publishing Method (GitHub Pages)",
+    "section": "",
+    "text": "This repository uses Quarto to render a documentation website to GitHub Pages.\nWe are adopting Option B: tag-based publishing to build release discipline ahead of 510(k) submission. Day-to-day edits can continue rapidly, but public publication is tied to explicit versioned releases.\n\n\n\nEnable fast iteration on content without continuously changing the public site.\nEnsure each public publication maps to a specific, immutable git state.\nMaintain a clear, auditable workflow identifying who approved and who performed a release.\nProvide practical ways for reviewers to preview changes before merging and before release.\n\n\n\n\n\nSource: .qmd files and assets in this repository.\nRendered site: output written to _site/ by Quarto.\nRelease: a published website update that corresponds to a git tag (e.g. v0.3.0).\nApprover(s): named individuals responsible for release approval.\nRelease manager: the person who creates the tag (or GitHub Release) and triggers publication.\n\n\n\n\n\n\n\nThe public GitHub Pages site should publish only from version tags on main, e.g.:\n\nv0.1.0, v0.2.0, v1.0.0\n\n\n\n\n\n\nNormal pushes to feature branches.\nNormal merges/pushes to main that are not tagged.\n\n\n\n\n\nA tag is an immutable pointer to a specific commit, making it easy to answer:\n\n“What exact content is currently published?”\n“Which changes are in the published documentation vs in-progress edits?”\n\n\n\n\n\n\n\n\n\nCreate a feature branch for each change set.\nKeep PRs small when possible (one theme per PR).\n\n\n\n\n\nUse Quarto’s preview server:\n\nquarto preview\n\nUse a full render to validate a clean build:\n\nquarto render\n\n\n\n\n\n\nUse PR review to gate changes into main.\nPrefer requiring at least one reviewer for all PRs.\n\n\n\n\n\nWe need reviewers to preview changes before merging and before releasing.\n\n\n\nLocal preview (fastest for authors)\n\nAuthors run quarto preview while editing.\nGood for rapid iteration, but not ideal as the only review mechanism.\n\nPR build artifacts (recommended for reviewers)\n\nCI renders the site for a PR and uploads _site/ as a downloadable artifact.\nReviewers download and open the generated HTML locally (or serve it locally).\nBenefits:\n\nPreview is reproducible (built in CI).\nNo need for reviewers to install Quarto/TinyTeX.\n\n\nMain preview\n\nmain can be previewed the same way as PRs:\n\nCI builds and attaches artifacts for commits.\nOr a maintainer can run quarto preview locally.\n\n\n\n\nNote: GitHub Pages itself is reserved for released tags, so it remains stable and clearly “official.”\n\n\n\n\n\n\n\n\nPRs merged to main are reviewed and CI is green.\nAny visible version string in the site (e.g., footer “Document Version”) is updated as appropriate.\nDecide the next tag (semantic versioning recommended).\n\n\n\n\n\nA release is approved by the designated approver(s) listed below.\nApproval should be recorded in one of these forms:\n\nA GitHub Issue/Discussion titled “Release vX.Y.Z approval” with explicit approval comments.\nA PR that bumps the version, with required reviewers approving.\n\n\n\n\n\n\nThe release manager creates an annotated tag on the intended commit on main:\n\nvX.Y.Z\n\n\n\n\n\n\nGitHub Actions renders and deploys the site.\nThe published site now corresponds to vX.Y.Z.\n\n\n\n\n\n\n\nFill these in and keep them current.\n\nPrimary approver: TBD\nSecondary approver (backup): TBD\n\n\n\n\nFill these in and keep them current.\n\nRelease manager(s): TBD\n\n\n\n\n\nAdd CODEOWNERS so specific files/sections require review.\nRequire branch protection on main:\n\nrequired reviews\nrequired status checks (Quarto render)\n\nAdd a short “release PR” that bumps the displayed document version and links the release tag.\n\n\n\n\n\n\nUse semantic-ish versioning even during early development:\n\nv0.MINOR.PATCH is fine for pre-1.0 work.\n\nTie the site-visible “Document Version” to the tag name whenever possible.\n\n\n\n\n\n_site/ is build output and should not be hand-edited.\nStopping quarto preview with Ctrl-C results in a non-zero exit code (expected)."
+  },
+  {
+    "objectID": "docs/Publishing-method.html#goals",
+    "href": "docs/Publishing-method.html#goals",
+    "title": "1 Publishing Method (GitHub Pages)",
+    "section": "",
+    "text": "Enable fast iteration on content without continuously changing the public site.\nEnsure each public publication maps to a specific, immutable git state.\nMaintain a clear, auditable workflow identifying who approved and who performed a release.\nProvide practical ways for reviewers to preview changes before merging and before release."
+  },
+  {
+    "objectID": "docs/Publishing-method.html#definitions",
+    "href": "docs/Publishing-method.html#definitions",
+    "title": "1 Publishing Method (GitHub Pages)",
+    "section": "",
+    "text": "Source: .qmd files and assets in this repository.\nRendered site: output written to _site/ by Quarto.\nRelease: a published website update that corresponds to a git tag (e.g. v0.3.0).\nApprover(s): named individuals responsible for release approval.\nRelease manager: the person who creates the tag (or GitHub Release) and triggers publication."
+  },
+  {
+    "objectID": "docs/Publishing-method.html#publishing-policy-tag-based",
+    "href": "docs/Publishing-method.html#publishing-policy-tag-based",
+    "title": "1 Publishing Method (GitHub Pages)",
+    "section": "",
+    "text": "The public GitHub Pages site should publish only from version tags on main, e.g.:\n\nv0.1.0, v0.2.0, v1.0.0\n\n\n\n\n\n\nNormal pushes to feature branches.\nNormal merges/pushes to main that are not tagged.\n\n\n\n\n\nA tag is an immutable pointer to a specific commit, making it easy to answer:\n\n“What exact content is currently published?”\n“Which changes are in the published documentation vs in-progress edits?”"
+  },
+  {
+    "objectID": "docs/Publishing-method.html#daily-editing-workflow",
+    "href": "docs/Publishing-method.html#daily-editing-workflow",
+    "title": "1 Publishing Method (GitHub Pages)",
+    "section": "",
+    "text": "Create a feature branch for each change set.\nKeep PRs small when possible (one theme per PR).\n\n\n\n\n\nUse Quarto’s preview server:\n\nquarto preview\n\nUse a full render to validate a clean build:\n\nquarto render\n\n\n\n\n\n\nUse PR review to gate changes into main.\nPrefer requiring at least one reviewer for all PRs."
+  },
+  {
+    "objectID": "docs/Publishing-method.html#previewing-changes-branch-pr-main",
+    "href": "docs/Publishing-method.html#previewing-changes-branch-pr-main",
+    "title": "1 Publishing Method (GitHub Pages)",
+    "section": "",
+    "text": "We need reviewers to preview changes before merging and before releasing.\n\n\n\nLocal preview (fastest for authors)\n\nAuthors run quarto preview while editing.\nGood for rapid iteration, but not ideal as the only review mechanism.\n\nPR build artifacts (recommended for reviewers)\n\nCI renders the site for a PR and uploads _site/ as a downloadable artifact.\nReviewers download and open the generated HTML locally (or serve it locally).\nBenefits:\n\nPreview is reproducible (built in CI).\nNo need for reviewers to install Quarto/TinyTeX.\n\n\nMain preview\n\nmain can be previewed the same way as PRs:\n\nCI builds and attaches artifacts for commits.\nOr a maintainer can run quarto preview locally.\n\n\n\n\nNote: GitHub Pages itself is reserved for released tags, so it remains stable and clearly “official.”"
+  },
+  {
+    "objectID": "docs/Publishing-method.html#release-workflow-how-to-publish",
+    "href": "docs/Publishing-method.html#release-workflow-how-to-publish",
+    "title": "1 Publishing Method (GitHub Pages)",
+    "section": "",
+    "text": "PRs merged to main are reviewed and CI is green.\nAny visible version string in the site (e.g., footer “Document Version”) is updated as appropriate.\nDecide the next tag (semantic versioning recommended).\n\n\n\n\n\nA release is approved by the designated approver(s) listed below.\nApproval should be recorded in one of these forms:\n\nA GitHub Issue/Discussion titled “Release vX.Y.Z approval” with explicit approval comments.\nA PR that bumps the version, with required reviewers approving.\n\n\n\n\n\n\nThe release manager creates an annotated tag on the intended commit on main:\n\nvX.Y.Z\n\n\n\n\n\n\nGitHub Actions renders and deploys the site.\nThe published site now corresponds to vX.Y.Z."
+  },
+  {
+    "objectID": "docs/Publishing-method.html#roles-and-approvers",
+    "href": "docs/Publishing-method.html#roles-and-approvers",
+    "title": "1 Publishing Method (GitHub Pages)",
+    "section": "",
+    "text": "Fill these in and keep them current.\n\nPrimary approver: TBD\nSecondary approver (backup): TBD\n\n\n\n\nFill these in and keep them current.\n\nRelease manager(s): TBD\n\n\n\n\n\nAdd CODEOWNERS so specific files/sections require review.\nRequire branch protection on main:\n\nrequired reviews\nrequired status checks (Quarto render)\n\nAdd a short “release PR” that bumps the displayed document version and links the release tag."
+  },
+  {
+    "objectID": "docs/Publishing-method.html#versioning-guidance",
+    "href": "docs/Publishing-method.html#versioning-guidance",
+    "title": "1 Publishing Method (GitHub Pages)",
+    "section": "",
+    "text": "Use semantic-ish versioning even during early development:\n\nv0.MINOR.PATCH is fine for pre-1.0 work.\n\nTie the site-visible “Document Version” to the tag name whenever possible."
+  },
+  {
+    "objectID": "docs/Publishing-method.html#notes",
+    "href": "docs/Publishing-method.html#notes",
+    "title": "1 Publishing Method (GitHub Pages)",
+    "section": "",
+    "text": "_site/ is build output and should not be hand-edited.\nStopping quarto preview with Ctrl-C results in a non-zero exit code (expected)."
+  },
+  {
+    "objectID": "ifu/troubleshooting.html",
+    "href": "ifu/troubleshooting.html",
+    "title": "Troubleshooting",
+    "section": "",
+    "text": "Check battery charge\nTry different power outlet\nContact support if issue persists\n\n\n\n\n\nClean lens\nCheck lighting conditions\nVerify proper positioning\n\n\n\n\n\nCheck Wi-Fi settings\nRestart device\nVerify network availability\n\n\nFor additional support, contact support@oraleye.ai",
+    "crumbs": [
+      "Instructions For Use",
+      "Support",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "objectID": "ifu/troubleshooting.html#common-issues",
+    "href": "ifu/troubleshooting.html#common-issues",
+    "title": "Troubleshooting",
+    "section": "",
+    "text": "Check battery charge\nTry different power outlet\nContact support if issue persists\n\n\n\n\n\nClean lens\nCheck lighting conditions\nVerify proper positioning\n\n\n\n\n\nCheck Wi-Fi settings\nRestart device\nVerify network availability\n\n\nFor additional support, contact support@oraleye.ai",
+    "crumbs": [
+      "Instructions For Use",
+      "Support",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "objectID": "ifu/index.html",
+    "href": "ifu/index.html",
+    "title": "Instructions For Use",
+    "section": "",
+    "text": "Welcome to the OralEye Instructions For Use documentation. This guide provides comprehensive information about the safe and effective use of the OralEye Intraoral Imaging System.\n\n\n\n\n\nOverview and Quick Start - Introduction and basic setup\nIntended Use - Device classification and indications\nDevice Description - System components and features\n\n\n\n\n\nSafety Information - Important safety instructions\nOperation Guide - Step-by-step operating procedures\nMaintenance - Cleaning and calibration\n\n\n\n\n\nTroubleshooting - Common issues and solutions\nTechnical Specifications - Detailed specifications\n\n\n\n\n\n\n\n\n\n\n\nCurrent Version\n\n\n\nVersion: 1.0.0\nEffective Date: TBD\nDocument Number: IFU-001\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nRead all instructions before using the OralEye system. Keep this document accessible for reference.\n\n\n\n\n\nFor technical support or questions:\n\nEmail: support@oraleye.ai\nWeb: https://oraleye.ai\nPhone: (Contact information TBD)\n\n\nThis document is maintained under version control. For regulatory information, see the Regulatory section.",
+    "crumbs": [
+      "Instructions For Use"
+    ]
+  },
+  {
+    "objectID": "ifu/index.html#quick-navigation",
+    "href": "ifu/index.html#quick-navigation",
+    "title": "Instructions For Use",
+    "section": "",
+    "text": "Overview and Quick Start - Introduction and basic setup\nIntended Use - Device classification and indications\nDevice Description - System components and features\n\n\n\n\n\nSafety Information - Important safety instructions\nOperation Guide - Step-by-step operating procedures\nMaintenance - Cleaning and calibration\n\n\n\n\n\nTroubleshooting - Common issues and solutions\nTechnical Specifications - Detailed specifications",
+    "crumbs": [
+      "Instructions For Use"
+    ]
+  },
+  {
+    "objectID": "ifu/index.html#document-information",
+    "href": "ifu/index.html#document-information",
+    "title": "Instructions For Use",
+    "section": "",
+    "text": "Current Version\n\n\n\nVersion: 1.0.0\nEffective Date: TBD\nDocument Number: IFU-001",
+    "crumbs": [
+      "Instructions For Use"
+    ]
+  },
+  {
+    "objectID": "ifu/index.html#important-notice",
+    "href": "ifu/index.html#important-notice",
+    "title": "Instructions For Use",
+    "section": "",
+    "text": "Important\n\n\n\nRead all instructions before using the OralEye system. Keep this document accessible for reference.",
+    "crumbs": [
+      "Instructions For Use"
+    ]
+  },
+  {
+    "objectID": "ifu/index.html#support-contact",
+    "href": "ifu/index.html#support-contact",
+    "title": "Instructions For Use",
+    "section": "",
+    "text": "For technical support or questions:\n\nEmail: support@oraleye.ai\nWeb: https://oraleye.ai\nPhone: (Contact information TBD)\n\n\nThis document is maintained under version control. For regulatory information, see the Regulatory section.",
+    "crumbs": [
+      "Instructions For Use"
+    ]
+  },
+  {
+    "objectID": "ifu/technical-specs.html",
+    "href": "ifu/technical-specs.html",
+    "title": "Technical Specifications",
+    "section": "",
+    "text": "Resolution: TBD\nImage Modes: Reflectance, Fluorescence\nImage Format: JPEG\n\n\n\n\n\nWeight: TBD\nDimensions: TBD\nDisplay: 720×720 touchscreen\n\n\n\n\n\nPower Supply: USB-C, 5V\nBattery: Lithium-ion rechargeable\nBattery Life: TBD hours typical use\n\n\n\n\n\nOperating Temperature: 15°C to 30°C\nStorage Temperature: -10°C to 50°C\nHumidity: 30% to 75% RH (operating)\n\n\n\n\n\nIEC 60601-1 (Medical Electrical Equipment)\nIEC 60601-1-2 (EMC)\nISO 13485 (Quality Management)\n\n\nSpecifications subject to change",
+    "crumbs": [
+      "Instructions For Use",
+      "Support",
+      "Technical Specifications"
+    ]
+  },
+  {
+    "objectID": "ifu/technical-specs.html#imaging-specifications",
+    "href": "ifu/technical-specs.html#imaging-specifications",
+    "title": "Technical Specifications",
+    "section": "",
+    "text": "Resolution: TBD\nImage Modes: Reflectance, Fluorescence\nImage Format: JPEG",
+    "crumbs": [
+      "Instructions For Use",
+      "Support",
+      "Technical Specifications"
+    ]
+  },
+  {
+    "objectID": "ifu/technical-specs.html#physical-specifications",
+    "href": "ifu/technical-specs.html#physical-specifications",
+    "title": "Technical Specifications",
+    "section": "",
+    "text": "Weight: TBD\nDimensions: TBD\nDisplay: 720×720 touchscreen",
+    "crumbs": [
+      "Instructions For Use",
+      "Support",
+      "Technical Specifications"
+    ]
+  },
+  {
+    "objectID": "ifu/technical-specs.html#electrical-specifications",
+    "href": "ifu/technical-specs.html#electrical-specifications",
+    "title": "Technical Specifications",
+    "section": "",
+    "text": "Power Supply: USB-C, 5V\nBattery: Lithium-ion rechargeable\nBattery Life: TBD hours typical use",
+    "crumbs": [
+      "Instructions For Use",
+      "Support",
+      "Technical Specifications"
+    ]
+  },
+  {
+    "objectID": "ifu/technical-specs.html#environmental",
+    "href": "ifu/technical-specs.html#environmental",
+    "title": "Technical Specifications",
+    "section": "",
+    "text": "Operating Temperature: 15°C to 30°C\nStorage Temperature: -10°C to 50°C\nHumidity: 30% to 75% RH (operating)",
+    "crumbs": [
+      "Instructions For Use",
+      "Support",
+      "Technical Specifications"
+    ]
+  },
+  {
+    "objectID": "ifu/technical-specs.html#compliance",
+    "href": "ifu/technical-specs.html#compliance",
+    "title": "Technical Specifications",
+    "section": "",
+    "text": "IEC 60601-1 (Medical Electrical Equipment)\nIEC 60601-1-2 (EMC)\nISO 13485 (Quality Management)\n\n\nSpecifications subject to change",
+    "crumbs": [
+      "Instructions For Use",
+      "Support",
+      "Technical Specifications"
+    ]
+  },
+  {
+    "objectID": "ifu/overview.html",
+    "href": "ifu/overview.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Document Version: 1.0.0\nEffective Date: January 2026\nManufacturer: OralEye, Inc.\n\n\n\nThis document provides comprehensive instructions for the safe and effective use of the OralEye Oral Imaging System.\n\n\n\n\n\n\nImportant\n\n\n\nRead all instructions carefully before operating the device. Keep this document accessible for future reference.\n\n\n\n\n\nThis Instructions For Use (IFU) document contains:\n\nDevice description and intended use\nSafety warnings and precautions\nOperating instructions\nMaintenance procedures\nTroubleshooting guidance\nTechnical specifications\n\n\n\n\nThe OralEye system is intended for use by:\n\nLicensed dentists\nDental hygienists\nTrained clinical staff under supervision of licensed practitioners\n\n\n\n\nFor experienced users familiar with oral imaging systems:\n\nPower On: Press the power button and wait for system initialization\nPatient Setup: Enter or select patient information\nCapture Images: Follow the on-screen guidance for image acquisition\nReview: Examine captured images for quality\nSave: Store images to patient record\n\n\n\n\n\n\n\nTip\n\n\n\nFor detailed instructions, refer to the Operation Guide.\n\n\n\n\n\n\nFDA Status: [Pending/510(k) Cleared/Exempt]\nRegulatory Class: Class II Medical Device\nProduct Code: [TBD]\n\n\n\n\nFor technical support or questions:\n\nEmail: support@oraleye.ai\nPhone: [Contact Number]\nWebsite: https://oraleye.ai/support\n\n\nDocument controlled under ISO 13485:2016 Quality Management System",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "ifu/overview.html#welcome",
+    "href": "ifu/overview.html#welcome",
+    "title": "Overview",
+    "section": "",
+    "text": "This document provides comprehensive instructions for the safe and effective use of the OralEye Oral Imaging System.\n\n\n\n\n\n\nImportant\n\n\n\nRead all instructions carefully before operating the device. Keep this document accessible for future reference.",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "ifu/overview.html#document-purpose",
+    "href": "ifu/overview.html#document-purpose",
+    "title": "Overview",
+    "section": "",
+    "text": "This Instructions For Use (IFU) document contains:\n\nDevice description and intended use\nSafety warnings and precautions\nOperating instructions\nMaintenance procedures\nTroubleshooting guidance\nTechnical specifications",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "ifu/overview.html#intended-users",
+    "href": "ifu/overview.html#intended-users",
+    "title": "Overview",
+    "section": "",
+    "text": "The OralEye system is intended for use by:\n\nLicensed dentists\nDental hygienists\nTrained clinical staff under supervision of licensed practitioners",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "ifu/overview.html#quick-start",
+    "href": "ifu/overview.html#quick-start",
+    "title": "Overview",
+    "section": "",
+    "text": "For experienced users familiar with oral imaging systems:\n\nPower On: Press the power button and wait for system initialization\nPatient Setup: Enter or select patient information\nCapture Images: Follow the on-screen guidance for image acquisition\nReview: Examine captured images for quality\nSave: Store images to patient record\n\n\n\n\n\n\n\nTip\n\n\n\nFor detailed instructions, refer to the Operation Guide.",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "ifu/overview.html#regulatory-status",
+    "href": "ifu/overview.html#regulatory-status",
+    "title": "Overview",
+    "section": "",
+    "text": "FDA Status: [Pending/510(k) Cleared/Exempt]\nRegulatory Class: Class II Medical Device\nProduct Code: [TBD]",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "ifu/overview.html#support",
+    "href": "ifu/overview.html#support",
+    "title": "Overview",
+    "section": "",
+    "text": "For technical support or questions:\n\nEmail: support@oraleye.ai\nPhone: [Contact Number]\nWebsite: https://oraleye.ai/support\n\n\nDocument controlled under ISO 13485:2016 Quality Management System",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "regulatory/version-history.html",
+    "href": "regulatory/version-history.html",
+    "title": "Version History",
+    "section": "",
+    "text": "This document is maintained under version control to ensure traceability and compliance with regulatory requirements.\n\n\n\n\n\n\nVersion\nDate\nAuthor\nChanges\n\n\n\n\n1.0.0\nTBD\nIDM Team\nInitial release\n\n\n\n\n\n\n\nDocument Number: IFU-001\nCurrent Version: 1.0.0\nEffective Date: TBD\nNext Review Date: TBD\n\n\n\n\n(Approval signatures and dates to be added)\n\n\n\n\n\n\n\nChange Management\n\n\n\nAll changes to this document follow our quality management system procedures and are reviewed for regulatory impact.\n\n\n\n\n\nPrevious versions of this document are maintained in accordance with regulatory requirements and are available upon request.",
+    "crumbs": [
+      "Regulatory",
+      "Version History"
+    ]
+  },
+  {
+    "objectID": "regulatory/version-history.html#revision-control",
+    "href": "regulatory/version-history.html#revision-control",
+    "title": "Version History",
+    "section": "",
+    "text": "This document is maintained under version control to ensure traceability and compliance with regulatory requirements.",
+    "crumbs": [
+      "Regulatory",
+      "Version History"
+    ]
+  },
+  {
+    "objectID": "regulatory/version-history.html#version-history",
+    "href": "regulatory/version-history.html#version-history",
+    "title": "Version History",
+    "section": "",
+    "text": "Version\nDate\nAuthor\nChanges\n\n\n\n\n1.0.0\nTBD\nIDM Team\nInitial release",
+    "crumbs": [
+      "Regulatory",
+      "Version History"
+    ]
+  },
+  {
+    "objectID": "regulatory/version-history.html#document-control",
+    "href": "regulatory/version-history.html#document-control",
+    "title": "Version History",
+    "section": "",
+    "text": "Document Number: IFU-001\nCurrent Version: 1.0.0\nEffective Date: TBD\nNext Review Date: TBD",
+    "crumbs": [
+      "Regulatory",
+      "Version History"
+    ]
+  },
+  {
+    "objectID": "regulatory/version-history.html#approval",
+    "href": "regulatory/version-history.html#approval",
+    "title": "Version History",
+    "section": "",
+    "text": "(Approval signatures and dates to be added)\n\n\n\n\n\n\n\nChange Management\n\n\n\nAll changes to this document follow our quality management system procedures and are reviewed for regulatory impact.",
+    "crumbs": [
+      "Regulatory",
+      "Version History"
+    ]
+  },
+  {
+    "objectID": "regulatory/version-history.html#archive",
+    "href": "regulatory/version-history.html#archive",
+    "title": "Version History",
+    "section": "",
+    "text": "Previous versions of this document are maintained in accordance with regulatory requirements and are available upon request.",
+    "crumbs": [
+      "Regulatory",
+      "Version History"
+    ]
+  },
+  {
+    "objectID": "regulatory/fda-clearance.html",
+    "href": "regulatory/fda-clearance.html",
+    "title": "FDA Clearance",
+    "section": "",
+    "text": "Development Status\n\n\n\nThe OralEye system is currently under development. FDA clearance status to be determined.\n\n\n\n\n\n\nDevice Type: Intraoral Imaging System\nClassification: TBD\nProduct Code: TBD\n\n\n\n\nSee Intended Use for the complete intended use statement.\n\n\n\n(Information to be added upon FDA submission)\n\nThis information will be updated as regulatory status changes.",
+    "crumbs": [
+      "Regulatory",
+      "FDA Clearance"
+    ]
+  },
+  {
+    "objectID": "regulatory/fda-clearance.html#regulatory-status",
+    "href": "regulatory/fda-clearance.html#regulatory-status",
+    "title": "FDA Clearance",
+    "section": "",
+    "text": "Development Status\n\n\n\nThe OralEye system is currently under development. FDA clearance status to be determined.",
+    "crumbs": [
+      "Regulatory",
+      "FDA Clearance"
+    ]
+  },
+  {
+    "objectID": "regulatory/fda-clearance.html#device-classification",
+    "href": "regulatory/fda-clearance.html#device-classification",
+    "title": "FDA Clearance",
+    "section": "",
+    "text": "Device Type: Intraoral Imaging System\nClassification: TBD\nProduct Code: TBD",
+    "crumbs": [
+      "Regulatory",
+      "FDA Clearance"
+    ]
+  },
+  {
+    "objectID": "regulatory/fda-clearance.html#intended-use-statement",
+    "href": "regulatory/fda-clearance.html#intended-use-statement",
+    "title": "FDA Clearance",
+    "section": "",
+    "text": "See Intended Use for the complete intended use statement.",
+    "crumbs": [
+      "Regulatory",
+      "FDA Clearance"
+    ]
+  },
+  {
+    "objectID": "regulatory/fda-clearance.html#regulatory-pathway",
+    "href": "regulatory/fda-clearance.html#regulatory-pathway",
+    "title": "FDA Clearance",
+    "section": "",
+    "text": "(Information to be added upon FDA submission)\n\nThis information will be updated as regulatory status changes.",
+    "crumbs": [
+      "Regulatory",
+      "FDA Clearance"
+    ]
+  },
+  {
+    "objectID": "contribute.html",
+    "href": "contribute.html",
+    "title": "How to Contribute",
+    "section": "",
+    "text": "This documentation is designed to be easy to review and improve.\nIf you are a clinician or reviewer, you can contribute without installing any tools."
+  },
+  {
+    "objectID": "contribute.html#option-1-report-an-issue-recommended-for-feedback",
+    "href": "contribute.html#option-1-report-an-issue-recommended-for-feedback",
+    "title": "How to Contribute",
+    "section": "1 Option 1: Report an issue (recommended for feedback)",
+    "text": "1 Option 1: Report an issue (recommended for feedback)\nOn any page, use the Issue / Report an issue link.\n\nThis opens a GitHub Issue where you can describe the change you want.\nThis is best for requests, questions, or feedback that needs discussion."
+  },
+  {
+    "objectID": "contribute.html#option-2-suggest-a-direct-edit-in-the-browser",
+    "href": "contribute.html#option-2-suggest-a-direct-edit-in-the-browser",
+    "title": "How to Contribute",
+    "section": "2 Option 2: Suggest a direct edit in the browser",
+    "text": "2 Option 2: Suggest a direct edit in the browser\nOn any page, use the Edit link.\nThis will open the corresponding source file (a .qmd file) on GitHub.\nTypical flow:\n\nClick Edit.\nMake a small change (typo fix, wording clarification, etc.).\nGitHub will prompt you to create a new branch and open a Pull Request (PR).\nSubmit the PR.\n\nA maintainer will review the PR and merge it when approved."
+  },
+  {
+    "objectID": "contribute.html#option-3-edit-locally-for-larger-changes",
+    "href": "contribute.html#option-3-edit-locally-for-larger-changes",
+    "title": "How to Contribute",
+    "section": "3 Option 3: Edit locally (for larger changes)",
+    "text": "3 Option 3: Edit locally (for larger changes)\nIf you are comfortable with developer tools:\n\nClone the repository.\nEdit .qmd files.\nPreview locally with quarto preview.\nOpen a PR."
+  },
+  {
+    "objectID": "contribute.html#what-happens-after-you-contribute",
+    "href": "contribute.html#what-happens-after-you-contribute",
+    "title": "How to Contribute",
+    "section": "4 What happens after you contribute",
+    "text": "4 What happens after you contribute\n\nProposed changes are reviewed via Pull Requests.\nThe public website is published from version tags (e.g. v0.2.0) rather than every merge."
+  },
+  {
+    "objectID": "contribute.html#tips-for-making-good-edits",
+    "href": "contribute.html#tips-for-making-good-edits",
+    "title": "How to Contribute",
+    "section": "5 Tips for making good edits",
+    "text": "5 Tips for making good edits\n\nKeep changes small and focused.\nPrefer plain language.\nFor IFU/safety content: keep wording unambiguous and consistent."
+  },
+  {
+    "objectID": "contribute.html#style-snippets",
+    "href": "contribute.html#style-snippets",
+    "title": "How to Contribute",
+    "section": "6 Style snippets",
+    "text": "6 Style snippets\n\n6.1 Figure with a standard caption\n![](images/example.png){fig-alt=\"Example image\" fig-cap=\"Figure: Example caption.\"}\n\n\n6.2 Figure with a margin note (recommended for short callouts)\nUse a margin note when you want a small explanation beside the figure (e.g., what to look for).\n![](images/example.png){fig-alt=\"Example image\" fig-cap=\"Figure: Example caption.\"}\n\n::: {.column-margin}\nKey point: Describe what to look for in the image.\n:::"
+  },
+  {
+    "objectID": "regulatory/symbols.html",
+    "href": "regulatory/symbols.html",
+    "title": "Symbols and Labels",
+    "section": "",
+    "text": "Symbol\nMeaning\n\n\n\n\n⚠️\nWarning/Caution\n\n\n⚡\nElectrical Hazard\n\n\n♻️\nRecyclable\n\n\n🚫\nDo Not Dispose in Regular Waste\n\n\n\n\n\n\n\n\n\nSymbol\nMeaning\n\n\n\n\nCE\nCE Mark (if applicable)\n\n\nⓇ\nManufacturer\n\n\n📅\nDate of Manufacture\n\n\nSN\nSerial Number\n\n\n\n\n\n\n\nDevice labels include:\n\nManufacturer name and address\nDevice model and serial number\nManufacturing date\nApplicable standards and certifications\nSafety warnings\n\n\nSymbols conform to ISO 15223-1 (Medical Devices Symbols)",
+    "crumbs": [
+      "Regulatory",
+      "Symbols and Labels"
+    ]
+  },
+  {
+    "objectID": "regulatory/symbols.html#device-symbols",
+    "href": "regulatory/symbols.html#device-symbols",
+    "title": "Symbols and Labels",
+    "section": "",
+    "text": "Symbol\nMeaning\n\n\n\n\n⚠️\nWarning/Caution\n\n\n⚡\nElectrical Hazard\n\n\n♻️\nRecyclable\n\n\n🚫\nDo Not Dispose in Regular Waste\n\n\n\n\n\n\n\n\n\nSymbol\nMeaning\n\n\n\n\nCE\nCE Mark (if applicable)\n\n\nⓇ\nManufacturer\n\n\n📅\nDate of Manufacture\n\n\nSN\nSerial Number",
+    "crumbs": [
+      "Regulatory",
+      "Symbols and Labels"
+    ]
+  },
+  {
+    "objectID": "regulatory/symbols.html#label-information",
+    "href": "regulatory/symbols.html#label-information",
+    "title": "Symbols and Labels",
+    "section": "",
+    "text": "Device labels include:\n\nManufacturer name and address\nDevice model and serial number\nManufacturing date\nApplicable standards and certifications\nSafety warnings\n\n\nSymbols conform to ISO 15223-1 (Medical Devices Symbols)",
+    "crumbs": [
+      "Regulatory",
+      "Symbols and Labels"
+    ]
+  },
+  {
+    "objectID": "regulatory/index.html",
+    "href": "regulatory/index.html",
+    "title": "Regulatory Information",
+    "section": "",
+    "text": "This section contains regulatory and compliance information for the OralEye Intraoral Imaging System.\n\n\n\n\nFDA Clearance\nSymbols and Labels\nVersion History\n\n\n\n\nOralEye is manufactured under an ISO 13485 certified quality management system.\n\n\n\nImage Data Management, Inc.\nFor regulatory inquiries:\n\nEmail: regulatory@oraleye.ai\nWeb: https://oraleye.ai\n\n\n\n\n\n\n\n\nNote\n\n\n\nFor the most current regulatory status, visit our website or contact regulatory affairs.",
+    "crumbs": [
+      "Regulatory",
+      "Regulatory Information"
+    ]
+  },
+  {
+    "objectID": "regulatory/index.html#overview",
+    "href": "regulatory/index.html#overview",
+    "title": "Regulatory Information",
+    "section": "",
+    "text": "This section contains regulatory and compliance information for the OralEye Intraoral Imaging System.",
+    "crumbs": [
+      "Regulatory",
+      "Regulatory Information"
+    ]
+  },
+  {
+    "objectID": "regulatory/index.html#contents",
+    "href": "regulatory/index.html#contents",
+    "title": "Regulatory Information",
+    "section": "",
+    "text": "FDA Clearance\nSymbols and Labels\nVersion History",
+    "crumbs": [
+      "Regulatory",
+      "Regulatory Information"
+    ]
+  },
+  {
+    "objectID": "regulatory/index.html#quality-management",
+    "href": "regulatory/index.html#quality-management",
+    "title": "Regulatory Information",
+    "section": "",
+    "text": "OralEye is manufactured under an ISO 13485 certified quality management system.",
+    "crumbs": [
+      "Regulatory",
+      "Regulatory Information"
+    ]
+  },
+  {
+    "objectID": "regulatory/index.html#contact-information",
+    "href": "regulatory/index.html#contact-information",
+    "title": "Regulatory Information",
+    "section": "",
+    "text": "Image Data Management, Inc.\nFor regulatory inquiries:\n\nEmail: regulatory@oraleye.ai\nWeb: https://oraleye.ai\n\n\n\n\n\n\n\n\nNote\n\n\n\nFor the most current regulatory status, visit our website or contact regulatory affairs.",
+    "crumbs": [
+      "Regulatory",
+      "Regulatory Information"
+    ]
+  },
+  {
+    "objectID": "ifu/intended-use.html",
+    "href": "ifu/intended-use.html",
+    "title": "Intended Use",
+    "section": "",
+    "text": "The OralEye Oral Imaging System is a portable, non-invasive imaging device designed for capturing high-resolution intraoral images using visible and fluorescence imaging modalities.\n\n\n\nThe OralEye system is intended for:\n\nCapturing intraoral photographs for diagnostic purposes\nDocumenting oral conditions and treatment progress\nPatient education and communication\nIntegration with digital patient records\n\n\n\n\n\nAge Range: All ages\nConditions: General oral health screening and documentation\nContraindications: None known\n\n\n\n\n\nEnhanced visualization of oral structures\nImproved patient communication\nComprehensive documentation\nSupport for treatment planning\n\n\n\n\nThe device is indicated for use in dental practice settings for capturing and storing intraoral images to assist in:\n\nClinical examination\nDiagnosis and treatment planning\nPatient record documentation\nPatient education\n\n\n\n\nThere are no known contraindications for use of this device when used as directed.\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\n\nThis device is prescription-use only and should be operated by trained dental professionals\nNot intended for use as the sole basis for diagnosis\nImages should be interpreted by qualified dental professionals\n\n\n\n\n\n\n\nType: Intraoral camera system\nModalities:\n\nVisible light reflectance imaging\nFluorescence imaging\n\nPortability: Handheld, battery-operated\n\n\nFor complete safety information, see Safety Information",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Intended Use"
+    ]
+  },
+  {
+    "objectID": "ifu/intended-use.html#device-description",
+    "href": "ifu/intended-use.html#device-description",
+    "title": "Intended Use",
+    "section": "",
+    "text": "The OralEye Oral Imaging System is a portable, non-invasive imaging device designed for capturing high-resolution intraoral images using visible and fluorescence imaging modalities.",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Intended Use"
+    ]
+  },
+  {
+    "objectID": "ifu/intended-use.html#intended-purpose",
+    "href": "ifu/intended-use.html#intended-purpose",
+    "title": "Intended Use",
+    "section": "",
+    "text": "The OralEye system is intended for:\n\nCapturing intraoral photographs for diagnostic purposes\nDocumenting oral conditions and treatment progress\nPatient education and communication\nIntegration with digital patient records",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Intended Use"
+    ]
+  },
+  {
+    "objectID": "ifu/intended-use.html#intended-patient-population",
+    "href": "ifu/intended-use.html#intended-patient-population",
+    "title": "Intended Use",
+    "section": "",
+    "text": "Age Range: All ages\nConditions: General oral health screening and documentation\nContraindications: None known",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Intended Use"
+    ]
+  },
+  {
+    "objectID": "ifu/intended-use.html#clinical-benefits",
+    "href": "ifu/intended-use.html#clinical-benefits",
+    "title": "Intended Use",
+    "section": "",
+    "text": "Enhanced visualization of oral structures\nImproved patient communication\nComprehensive documentation\nSupport for treatment planning",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Intended Use"
+    ]
+  },
+  {
+    "objectID": "ifu/intended-use.html#indications-for-use",
+    "href": "ifu/intended-use.html#indications-for-use",
+    "title": "Intended Use",
+    "section": "",
+    "text": "The device is indicated for use in dental practice settings for capturing and storing intraoral images to assist in:\n\nClinical examination\nDiagnosis and treatment planning\nPatient record documentation\nPatient education",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Intended Use"
+    ]
+  },
+  {
+    "objectID": "ifu/intended-use.html#contraindications",
+    "href": "ifu/intended-use.html#contraindications",
+    "title": "Intended Use",
+    "section": "",
+    "text": "There are no known contraindications for use of this device when used as directed.",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Intended Use"
+    ]
+  },
+  {
+    "objectID": "ifu/intended-use.html#warnings",
+    "href": "ifu/intended-use.html#warnings",
+    "title": "Intended Use",
+    "section": "",
+    "text": "Warning\n\n\n\n\nThis device is prescription-use only and should be operated by trained dental professionals\nNot intended for use as the sole basis for diagnosis\nImages should be interpreted by qualified dental professionals",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Intended Use"
+    ]
+  },
+  {
+    "objectID": "ifu/intended-use.html#device-classification",
+    "href": "ifu/intended-use.html#device-classification",
+    "title": "Intended Use",
+    "section": "",
+    "text": "Type: Intraoral camera system\nModalities:\n\nVisible light reflectance imaging\nFluorescence imaging\n\nPortability: Handheld, battery-operated\n\n\nFor complete safety information, see Safety Information",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Intended Use"
+    ]
+  },
+  {
+    "objectID": "ifu/safety.html",
+    "href": "ifu/safety.html",
+    "title": "Safety Information",
+    "section": "",
+    "text": "Critical Safety Information\n\n\n\nRead and understand all safety information before using the OralEye system. Failure to follow these instructions may result in injury or device damage.\n\n\n\n\n\n\n\n\nUse only the provided power adapter\nDo not expose the device to liquids\nDisconnect power before cleaning\nDo not use if power cord is damaged\n\n\n\n\n\nEnsure patient comfort during imaging procedures\nAvoid prolonged LED exposure to eyes\nUse appropriate infection control procedures\nFollow standard precautions for patient contact\n\n\n\n\n\nLED light source is safe for intended use\nDo not stare directly into LED array\nAutomatic exposure control prevents overexposure\n\n\n\n\n\n\n\n\nBarrier Protection: Use disposable barriers for intraoral components\nSurface Disinfection: Clean all surfaces with approved disinfectant after each patient\nHand Hygiene: Follow standard hand hygiene protocols\n\n\n\n\n\nIsopropyl alcohol (70%)\nEPA-registered hospital-grade disinfectants\nFollow manufacturer’s contact time recommendations\n\n\n\n\n\n\n\nWarning\n\n\n\nDo not autoclave or immerse device in liquid. Do not use abrasive cleaners.\n\n\n\n\n\n\n\n\n\nTemperature: 15°C to 30°C (59°F to 86°F)\nHumidity: 30% to 75% relative humidity\nPressure: 700 hPa to 1060 hPa\n\n\n\n\n\nTemperature: -10°C to 50°C (14°F to 122°F)\nHumidity: 10% to 90% relative humidity (non-condensing)\n\n\n\n\n\n\n\n\nDo not dispose of device in regular waste\nFollow local regulations for electronic waste disposal\nContact manufacturer for recycling options\n\n\n\n\n\nLithium-ion batteries must be recycled according to local regulations\nContact local waste management for battery recycling\n\n\n\n\n\nReport adverse events or device problems to:\n\nManufacturer: support@oraleye.ai\nFDA: via MedWatch (1-800-FDA-1088)\n\n\nThis safety information is current as of the document effective date.",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Safety Information"
+    ]
+  },
+  {
+    "objectID": "ifu/safety.html#important-safety-instructions",
+    "href": "ifu/safety.html#important-safety-instructions",
+    "title": "Safety Information",
+    "section": "",
+    "text": "Critical Safety Information\n\n\n\nRead and understand all safety information before using the OralEye system. Failure to follow these instructions may result in injury or device damage.",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Safety Information"
+    ]
+  },
+  {
+    "objectID": "ifu/safety.html#general-warnings",
+    "href": "ifu/safety.html#general-warnings",
+    "title": "Safety Information",
+    "section": "",
+    "text": "Use only the provided power adapter\nDo not expose the device to liquids\nDisconnect power before cleaning\nDo not use if power cord is damaged\n\n\n\n\n\nEnsure patient comfort during imaging procedures\nAvoid prolonged LED exposure to eyes\nUse appropriate infection control procedures\nFollow standard precautions for patient contact\n\n\n\n\n\nLED light source is safe for intended use\nDo not stare directly into LED array\nAutomatic exposure control prevents overexposure",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Safety Information"
+    ]
+  },
+  {
+    "objectID": "ifu/safety.html#infection-control",
+    "href": "ifu/safety.html#infection-control",
+    "title": "Safety Information",
+    "section": "",
+    "text": "Barrier Protection: Use disposable barriers for intraoral components\nSurface Disinfection: Clean all surfaces with approved disinfectant after each patient\nHand Hygiene: Follow standard hand hygiene protocols\n\n\n\n\n\nIsopropyl alcohol (70%)\nEPA-registered hospital-grade disinfectants\nFollow manufacturer’s contact time recommendations\n\n\n\n\n\n\n\nWarning\n\n\n\nDo not autoclave or immerse device in liquid. Do not use abrasive cleaners.",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Safety Information"
+    ]
+  },
+  {
+    "objectID": "ifu/safety.html#environmental-conditions",
+    "href": "ifu/safety.html#environmental-conditions",
+    "title": "Safety Information",
+    "section": "",
+    "text": "Temperature: 15°C to 30°C (59°F to 86°F)\nHumidity: 30% to 75% relative humidity\nPressure: 700 hPa to 1060 hPa\n\n\n\n\n\nTemperature: -10°C to 50°C (14°F to 122°F)\nHumidity: 10% to 90% relative humidity (non-condensing)",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Safety Information"
+    ]
+  },
+  {
+    "objectID": "ifu/safety.html#disposal",
+    "href": "ifu/safety.html#disposal",
+    "title": "Safety Information",
+    "section": "",
+    "text": "Do not dispose of device in regular waste\nFollow local regulations for electronic waste disposal\nContact manufacturer for recycling options\n\n\n\n\n\nLithium-ion batteries must be recycled according to local regulations\nContact local waste management for battery recycling",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Safety Information"
+    ]
+  },
+  {
+    "objectID": "ifu/safety.html#reporting",
+    "href": "ifu/safety.html#reporting",
+    "title": "Safety Information",
+    "section": "",
+    "text": "Report adverse events or device problems to:\n\nManufacturer: support@oraleye.ai\nFDA: via MedWatch (1-800-FDA-1088)\n\n\nThis safety information is current as of the document effective date.",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Safety Information"
+    ]
+  },
+  {
+    "objectID": "ifu/maintenance.html",
+    "href": "ifu/maintenance.html",
+    "title": "Maintenance",
+    "section": "",
+    "text": "Clean device surfaces after each use\nInspect for damage\nCharge battery as needed\n\n\n\n\n\nCalibration (as recommended)\nSoftware updates\nBattery health check\n\n\n\n\nContact manufacturer for service and repair.\n\nContent in development",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Maintenance"
+    ]
+  },
+  {
+    "objectID": "ifu/maintenance.html#daily-maintenance",
+    "href": "ifu/maintenance.html#daily-maintenance",
+    "title": "Maintenance",
+    "section": "",
+    "text": "Clean device surfaces after each use\nInspect for damage\nCharge battery as needed",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Maintenance"
+    ]
+  },
+  {
+    "objectID": "ifu/maintenance.html#periodic-maintenance",
+    "href": "ifu/maintenance.html#periodic-maintenance",
+    "title": "Maintenance",
+    "section": "",
+    "text": "Calibration (as recommended)\nSoftware updates\nBattery health check",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Maintenance"
+    ]
+  },
+  {
+    "objectID": "ifu/maintenance.html#service",
+    "href": "ifu/maintenance.html#service",
+    "title": "Maintenance",
+    "section": "",
+    "text": "Contact manufacturer for service and repair.\n\nContent in development",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Maintenance"
+    ]
+  },
+  {
+    "objectID": "ifu/operation.html",
+    "href": "ifu/operation.html",
+    "title": "Operation Guide",
+    "section": "",
+    "text": "Charge the device fully before first use\nPower on the device\nComplete initial configuration wizard\nConnect to Wi-Fi network\n\n\n\n\n(Detailed operating instructions to be added)\n\n\n\n\n\nSelect or create patient record\nChoose imaging mode (reflectance/fluorescence)\nPosition device for optimal view\nCapture image\nReview and save\n\n\nContent in development",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Operation Guide"
+    ]
+  },
+  {
+    "objectID": "ifu/operation.html#getting-started",
+    "href": "ifu/operation.html#getting-started",
+    "title": "Operation Guide",
+    "section": "",
+    "text": "Charge the device fully before first use\nPower on the device\nComplete initial configuration wizard\nConnect to Wi-Fi network\n\n\n\n\n(Detailed operating instructions to be added)",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Operation Guide"
+    ]
+  },
+  {
+    "objectID": "ifu/operation.html#image-capture-workflow",
+    "href": "ifu/operation.html#image-capture-workflow",
+    "title": "Operation Guide",
+    "section": "",
+    "text": "Select or create patient record\nChoose imaging mode (reflectance/fluorescence)\nPosition device for optimal view\nCapture image\nReview and save\n\n\nContent in development",
+    "crumbs": [
+      "Instructions For Use",
+      "Safety & Operation",
+      "Operation Guide"
+    ]
+  },
+  {
+    "objectID": "ifu/device-description.html",
+    "href": "ifu/device-description.html",
+    "title": "Device Description",
+    "section": "",
+    "text": "Imaging Unit: Handheld camera with dual LED arrays\nDisplay: 720×720 touchscreen interface\nProcessing Unit: Raspberry Pi 5 CM\nPower: Rechargeable lithium-ion battery\n\n\n\n\n\nPatient management system\nImage capture and processing\nCloud synchronization\nAI-assisted analysis (optional)\n\n\n\n\n\n(Content to be added)\n\nFor complete technical specifications, see Technical Specifications",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Device Description"
+    ]
+  },
+  {
+    "objectID": "ifu/device-description.html#system-components",
+    "href": "ifu/device-description.html#system-components",
+    "title": "Device Description",
+    "section": "",
+    "text": "Imaging Unit: Handheld camera with dual LED arrays\nDisplay: 720×720 touchscreen interface\nProcessing Unit: Raspberry Pi 5 CM\nPower: Rechargeable lithium-ion battery\n\n\n\n\n\nPatient management system\nImage capture and processing\nCloud synchronization\nAI-assisted analysis (optional)",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Device Description"
+    ]
+  },
+  {
+    "objectID": "ifu/device-description.html#technical-overview",
+    "href": "ifu/device-description.html#technical-overview",
+    "title": "Device Description",
+    "section": "",
+    "text": "(Content to be added)\n\nFor complete technical specifications, see Technical Specifications",
+    "crumbs": [
+      "Instructions For Use",
+      "Getting Started",
+      "Device Description"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "OralEye Documentation",
+    "section": "",
+    "text": "Official Instructions For Use and technical documentation for dental professionals.\n\nGet Started View Safety Info",
+    "crumbs": [
+      "Home",
+      "OralEye Documentation"
+    ]
+  },
+  {
+    "objectID": "index.html#documentation",
+    "href": "index.html#documentation",
+    "title": "OralEye Documentation",
+    "section": "1.1 Documentation",
+    "text": "1.1 Documentation\n\n\n1.1.1 📘 Instructions For Use\nComplete operating instructions, safety information, and maintenance guidance.\nRead IFU →\n\n\n1.1.2 📋 Regulatory\nFDA clearance status, compliance symbols, and document version history.\nView Regulatory →\n\n\n1.1.3 🎓 Tutorials\nStep-by-step guides for common tasks and workflows.\nBrowse Tutorials →",
+    "crumbs": [
+      "Home",
+      "OralEye Documentation"
+    ]
+  },
+  {
+    "objectID": "index.html#document-information",
+    "href": "index.html#document-information",
+    "title": "OralEye Documentation",
+    "section": "1.2 Document Information",
+    "text": "1.2 Document Information\nCurrent Version: 1.0.0 | Last Updated: January 2026 | Status: Draft\n\nNeed help? Contact support@oraleye.ai or visit oraleye.ai\n\n\nThis documentation is maintained under ISO 13485:2016 Quality Management System",
+    "crumbs": [
+      "Home",
+      "OralEye Documentation"
+    ]
+  }
+]

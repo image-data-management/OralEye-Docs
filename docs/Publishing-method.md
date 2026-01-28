@@ -4,6 +4,21 @@ This repository uses **Quarto** to render a documentation website to GitHub Page
 
 We are adopting **Option B: tag-based publishing** to build release discipline ahead of 510(k) submission. Day-to-day edits can continue rapidly, but **public publication** is tied to explicit versioned releases.
 
+## Quick Reference: Deploy Commands
+
+```bash
+# Commit and push changes to main
+git add -A
+git commit -m "Prepare vX.Y.Z release"
+git push origin main
+
+# Create and push a version tag to trigger deployment
+git tag vX.Y.Z
+git push origin vX.Y.Z
+```
+
+The GitHub Actions workflow (`.github/workflows/deploy.yml`) automatically renders and deploys the site when a `v*` tag is pushed.
+
 ## Goals
 
 - Enable fast iteration on content without continuously changing the public site.

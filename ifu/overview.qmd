@@ -1,71 +1,44 @@
 ---
-title: "Overview"
+title: "Introduction"
 ---
 
-# OralEye Instructions For Use
+The OralEye™ Imaging System is an extraoral digital camera intended for use by dental professionals to capture, display, and store high-contrast reflectance and fluorescence images of the oral cavity. The system provides a standardized "visual ledger" for:
 
-**Document Version:** 1.0.0  
-**Effective Date:** January 2026  
-**Manufacturer:** OralEye, Inc.
+* **Clinical Documentation:** Creating a permanent digital record of visible oral tissues during routine dental imaging sessions.
 
----
+* **Longitudinal Monitoring:** Providing repeatable, standardized images to track the appearance of visible anomalies over time.
 
-## Welcome
+* **Medical Communication:** Facilitating the secure transfer of encrypted digital records to specialists for professional consultation and referral (Product Code LMD).
 
-This document provides comprehensive instructions for the safe and effective use of the OralEye Oral Imaging System.
-
-::: {.callout-warning}
-## Important
-Read all instructions carefully before operating the device. Keep this document accessible for future reference.
+::: {.callout-important}
+## Important Note
+The OralEye™ is not intended for the standalone detection of oral cancer, the diagnosis of occult pathology, or the determination of surgical margins.
 :::
 
-## Document Purpose
+## System Components
 
-This Instructions For Use (IFU) document contains:
+The OralEye™ system includes four main components:
 
-- Device description and intended use
-- Safety warnings and precautions
-- Operating instructions
-- Maintenance procedures
-- Troubleshooting guidance
-- Technical specifications
+* **Handpiece:** a handheld imaging unit equipped with dual cameras, illumination sources, and a display.
+* **Charging Cradle:** used for docking and recharging the Handpiece.
+* **Calibration Chart Holder:** designed to hold various calibration charts.
+* **External Power Adapter:** supplies power to the Charging Cradle.
 
-## Intended Users
+![The OralEye Handpiece is shown in its charging cradle, facing a calibration chart.](./images/OE_SideView.png){fig-alt="OralEye handpiece resting in its charging cradle" width="60%"}
 
-The OralEye system is intended for use by:
+The Handpiece is designed for use with a single-use, disposable plastic barrier to maintain hygiene and prevent cross-contamination between patients.
 
-- Licensed dentists
-- Dental hygienists
-- Trained clinical staff under supervision of licensed practitioners
+## Imaging
 
-## Quick Start
+During operation, the OralEye™ Handpiece emits two types of light into the oral cavity:
 
-For experienced users familiar with oral imaging systems:
+1. **White illumination** to capture reflectance images of the oral mucosa.
+2. **Blue excitation light** to induce tissue autofluorescence, enabling capture of fluorescence images that reveal differences in tissue characteristics.
 
-1. **Power On:** Press the power button and wait for system initialization
-2. **Patient Setup:** Enter or select patient information
-3. **Capture Images:** Follow the on-screen guidance for image acquisition
-4. **Review:** Examine captured images for quality
-5. **Save:** Store images to patient record
+Both image types are stored locally on the device and automatically uploaded to the secure OralEye™ Cloud Platform, where they can be integrated into patient health records.
 
-::: {.callout-tip}
-For detailed instructions, refer to the [Operation Guide](operation.qmd).
-:::
-
-## Regulatory Status
-
-- **FDA Status:** [Pending/510(k) Cleared/Exempt]
-- **Regulatory Class:** Class II Medical Device
-- **Product Code:** [TBD]
-
-## Support
-
-For technical support or questions:
-
-- **Email:** support@oraleye.ai
-- **Phone:** [Contact Number]
-- **Website:** <https://oraleye.ai/support>
+Images may be viewed in real time during acquisition and subsequently compared across visits to monitor changes in tissue appearance. The combination of reflectance and fluorescence imaging provides complementary visual information to support the documentation of visible areas that the clinician has identified for further tracking or professional consultation.
 
 ---
 
-*Document controlled under ISO 13485:2016 Quality Management System*
+*Next: [Intended Use](intended-use.qmd) · [Safety Information](safety.qmd) · [Device Description](device-description.qmd)*

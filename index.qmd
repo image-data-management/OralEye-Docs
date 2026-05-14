@@ -1,6 +1,7 @@
 ---
 title: "OralEye Documentation"
 toc: false
+number-sections: false
 page-layout: full
 ---
 
@@ -33,21 +34,21 @@ This device is intended for use by trained dental professionals only. Read all i
 
 ::: {.card-grid}
 ::: {.doc-card}
-### 📘 Instructions For Use
+### Instructions For Use
 Complete operating instructions, safety information, and maintenance guidance.
 
 [Read IFU →](ifu/index.qmd)
 :::
 
 ::: {.doc-card}
-### 📋 Regulatory
+### Regulatory
 FDA clearance status, compliance symbols, and document version history.
 
 [View Regulatory →](regulatory/index.qmd)
 :::
 
 ::: {.doc-card}
-### 🎓 Tutorials
+### Tutorials
 Step-by-step guides for common tasks and workflows.
 
 [Browse Tutorials →](tutorials/index.qmd)

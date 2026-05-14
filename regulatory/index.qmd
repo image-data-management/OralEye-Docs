@@ -11,6 +11,7 @@ This section contains regulatory and compliance information for the OralEye Intr
 ## Contents
 
 - [FDA Clearance](fda-clearance.qmd)
+- [Mobile App Privacy Policy](mobile-app-privacy-policy.qmd)
 - [Symbols and Labels](symbols.qmd)
 - [Version History](version-history.qmd)
 

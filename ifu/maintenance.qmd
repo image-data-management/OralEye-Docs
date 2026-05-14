@@ -1,25 +1,21 @@
 ---
-title: "Maintenance"
+title: "Maintenance and Calibration"
 ---
 
-# Maintenance
+## Maintenance and Cleaning
 
-## Daily Maintenance
+Before each patient use, wipe the device body and camera tip with a soft cloth dampened with an approved medical-grade disinfectant (e.g., 70% isopropyl alcohol).
 
-- Clean device surfaces after each use
-- Inspect for damage
-- Charge battery as needed
+Do not submerge the device in liquid.
 
-## Periodic Maintenance
-
-- Calibration (as recommended)
-- Software updates
-- Battery health check
-
-## Service
-
-Contact manufacturer for service and repair.
+Ensure the camera lens is clean and free of smudges for optimal image quality.
 
 ---
 
-*Content in development*
+## Calibration
+
+Image calibration targets are included with the cradle. Users capture images of these targets through automated procedures to assess the performance of the camera and light source. These images are uploaded and stored as references, enabling ongoing monitoring of system quality control over time. An example target is shown here, with additional examples and detailed explanations available in the Calibration Guide.
+
+---
+
+*For technical specifications, see [Technical Specifications](technical-specs.qmd).*

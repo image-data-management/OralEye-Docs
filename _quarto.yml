@@ -11,7 +11,7 @@ website:
   reader-mode: false
   
   navbar:
-    logo: images/logo.png
+    logo: /ifu/images/logo.png
     logo-href: index.qmd
     title: "OralEye"
     left:
@@ -55,12 +55,14 @@ website:
           contents:
             - ifu/troubleshooting.qmd
             - ifu/technical-specs.qmd
+            - ifu/admin-guide.qmd
     
     - title: "Regulatory"
       collapse-level: 0
       contents:
         - regulatory/index.qmd
         - regulatory/fda-clearance.qmd
+        - regulatory/mobile-app-privacy-policy.qmd
         - regulatory/symbols.qmd
         - regulatory/version-history.qmd
 
@@ -78,6 +80,7 @@ website:
 
 format:
   html:
+    embed-resources: true
     theme: 
       - flatly
       - custom.scss
@@ -86,7 +89,7 @@ format:
       body-width: 980px
       margin-width: 320px
     toc: false
-    number-sections: true
+    number-sections: false
     code-copy: true
     code-overflow: wrap
     smooth-scroll: true
@@ -96,13 +99,13 @@ format:
       text: |
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
     
   # pdf:
   #   documentclass: article
   #   toc: true
   #   toc-depth: 3
-  #   number-sections: true
+  #   number-sections: false
   #   colorlinks: true
   #   papersize: letter
   #   geometry:

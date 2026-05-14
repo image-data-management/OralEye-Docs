@@ -1,0 +1,97 @@
+---
+title: "Mobile App Privacy Policy"
+---
+
+# Mobile App Privacy Policy
+
+**Effective date:** May 13, 2026  
+**Applies to:** OralEye Mobile App (Android)
+
+This Privacy Policy describes how OralEye collects, uses, stores, and shares information when you use the OralEye mobile application.
+
+## Who We Are
+
+**Image Data Management, Inc.** ("OralEye", "we", "our", "us") operates the OralEye mobile app for dental imaging workflows.
+
+## Information We Collect
+
+We may collect the following categories of information:
+
+- **Account and authentication data**: Sign-in identifiers and authentication tokens (for example, via Firebase Authentication).
+- **Clinical image data**: Images captured using your device camera while using the app.
+- **App usage and diagnostics**: Technical information needed to operate, secure, and troubleshoot the service.
+- **Device and network metadata**: Basic device/app version data and network request metadata used for reliability and security.
+
+## Permissions We Request
+
+The app requests the following Android permissions:
+
+- **Camera (`android.permission.CAMERA`)**: Used to capture intraoral images as part of app functionality.
+- **Internet (`android.permission.INTERNET`)**: Used to communicate with OralEye backend services.
+- **Storage-related permissions** (if present on specific Android versions): Used to save or access images needed for workflow.
+
+We do not use camera access for background surveillance or unrelated purposes.
+
+## How We Use Information
+
+We use collected information to:
+
+- Provide core app functionality (image capture, processing, and retrieval).
+- Authenticate users and secure access to data.
+- Maintain, monitor, and improve reliability and performance.
+- Comply with legal, regulatory, and safety obligations.
+
+## Legal Basis and Purpose Limitation
+
+We process information only for legitimate operational and clinical workflow purposes, and only to the extent necessary for those purposes.
+
+## Data Sharing
+
+We do not sell personal information.
+
+We may share information only with:
+
+- **Service providers** that help operate the app (for example, cloud hosting and authentication providers such as Google Firebase).
+- **Authorized users and organizations** associated with your clinical workflow.
+- **Regulatory or legal authorities** when required by law.
+
+## Data Storage and Security
+
+We use administrative, technical, and organizational safeguards designed to protect data from unauthorized access, alteration, disclosure, or destruction.
+
+No system is 100% secure, but we apply security best practices and access controls appropriate to the service.
+
+## Data Retention
+
+We retain information only as long as needed for operational, clinical, legal, and compliance purposes, then securely delete or de-identify it where appropriate.
+
+## Children
+
+The app is intended for professional/clinical use and is not directed to children.
+
+## International Transfers
+
+Your information may be processed in regions where our infrastructure or service providers operate, subject to applicable safeguards.
+
+## Your Choices and Rights
+
+Depending on your jurisdiction, you may have rights to:
+
+- Request access to your personal information.
+- Request correction or deletion.
+- Object to or restrict certain processing.
+- Withdraw consent where consent is the legal basis.
+
+To submit a request, contact us using the details below.
+
+## Changes to This Policy
+
+We may update this Privacy Policy from time to time. Material changes will be reflected by updating the effective date and, where appropriate, additional notice.
+
+## Contact Us
+
+For privacy questions or requests:
+
+- **Email:** privacy@oraleye.ai
+- **Support:** support@oraleye.ai
+- **Website:** https://oraleye.ai

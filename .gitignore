@@ -1,4 +1,7 @@
 /.quarto/
 /_site/
+site_libs/
 /_cache/
+/_freeze/
 **/*.quarto_ipynb
+.DS_Store

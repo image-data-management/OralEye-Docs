@@ -1,64 +1,97 @@
 ---
-title: "Intended Use"
+title: "Intended Use and Indications"
 ---
 
-# Intended Use
-
-## Device Description
-
-The OralEye Oral Imaging System is a portable, non-invasive imaging device designed for capturing high-resolution intraoral images using visible and fluorescence imaging modalities.
-
-## Intended Purpose
-
-The OralEye system is intended for:
-
-- Capturing intraoral photographs for diagnostic purposes
-- Documenting oral conditions and treatment progress
-- Patient education and communication
-- Integration with digital patient records
-
-## Intended Patient Population
-
-- **Age Range:** All ages
-- **Conditions:** General oral health screening and documentation
-- **Contraindications:** None known
-
-## Clinical Benefits
-
-- Enhanced visualization of oral structures
-- Improved patient communication
-- Comprehensive documentation
-- Support for treatment planning
 
 ## Indications for Use
 
-The device is indicated for use in dental practice settings for capturing and storing intraoral images to assist in:
+The OralEye™ Imaging System provides standardized digital documentation to complement traditional clinical workflows. The system is designed to record and store digital data for baseline referencing and longitudinal monitoring.
 
-1. Clinical examination
-2. Diagnosis and treatment planning
-3. Patient record documentation
-4. Patient education
-
-## Contraindications
-
-There are no known contraindications for use of this device when used as directed.
-
-## Warnings
-
-::: {.callout-warning}
-- This device is prescription-use only and should be operated by trained dental professionals
-- Not intended for use as the sole basis for diagnosis
-- Images should be interpreted by qualified dental professionals
+::: {.callout-important}
+## Important
+The use of this system is an adjunct to, and does not replace, the standard clinical protocol.
 :::
 
-## Device Classification
+### Clinical Application
 
-- **Type:** Intraoral camera system
-- **Modalities:** 
-  - Visible light reflectance imaging
-  - Fluorescence imaging
-- **Portability:** Handheld, battery-operated
+**Specifically:**
+
+- The clinician should **always perform a traditional visual inspection** of the oral cavity, utilizing the OralEye to create a permanent digital record of the current status
+- The OralEye is a **documentation tool** for record-keeping and data management
+- It is **not a diagnostic device** and should not be used to override clinical findings or professional judgment derived from traditional visual inspection
+
+::: {.callout-warning}
+## Not Intended For
+The OralEye™ is **not intended** for:
+- Standalone detection of oral cancer
+- Diagnosis of occult pathology
+- Determination of surgical margins
+:::
+
+## Documentation Protocols
+
+The OralEye™ Imaging System supports two primary documentation protocols:
+
+### Comprehensive Record
+
+The **Comprehensive Record** involves systematic capture of the patient's oral cavity, utilizing reflectance and fluorescence imaging across key anatomical sites.
+
+**Purpose:**
+- Establishes a stable, objective baseline of oral mucosal appearance
+- Records tissue patterns creating a 'visual ledger'
+- Assists clinicians in longitudinal monitoring
+
+**Benefits:**
+- Enables comparison of current images against archived records
+- Facilitates tracking of visible changes over time
+- Supports routine dental record-keeping
+- Aids in professional consultation
+
+**Typical Coverage:**
+- Nine distinct anatomical regions
+- Standardized imaging positions
+- Both reflectance and fluorescence modalities
+
+### Regional Record
+
+The **Regional Record** is intended for standardized capture of areas with visible clinical findings.
+
+**Purpose:**
+- Records high-contrast reflectance and fluorescence images of specific sites
+- Includes digital tools to document visible dimensions and shape
+- Provides objective data as a 'visual ledger'
+
+**Benefits:**
+- Assists in tracking changes in site appearance over time
+- Facilitates high-resolution, standardized data for referral
+- Supports the referral handshake between general practitioners and specialists
+- Ensures specialists receive consistent and objective data sets
+
+**Clinical Use:**
+- Focus on specific areas of concern
+- Multiple captures of the same region
+- Enhanced detail for specialist consultation
+- Supports triage and longitudinal monitoring
+
+## Intended Users
+
+The OralEye™ Imaging System is intended for use by:
+
+- Licensed dental professionals
+- Trained dental hygienists
+- Clinical staff under supervision of licensed practitioners
+
+::: {.callout-note}
+## Professional Use Only
+This device is to be operated only by trained clinicians.
+:::
+
+## Product Classification
+
+- **Product Code:** LMD (Camera, Dental)
+- **Use Category:** Medical Communication and Documentation
+- **Regulatory Classification:** Professional dental imaging device
 
 ---
 
-*For complete safety information, see [Safety Information](safety.qmd)*
+*For safety warnings and precautions, see [Safety Information](safety.qmd)*

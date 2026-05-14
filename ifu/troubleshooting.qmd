@@ -2,28 +2,16 @@
 title: "Troubleshooting"
 ---
 
-# Troubleshooting
+## Common Issues and Solutions
 
-## Common Issues
+* **Cannot Log In:** Ensure you are selecting the correct user profile and entering the correct PIN.
 
-### Device Won't Power On
+* **Upload Fails:** Navigate to **Settings \-\> Device Info** to check your WiFi connection status. If not connected, use the **WiFi Setup** option to connect to a network.
 
-- Check battery charge
-- Try different power outlet
-- Contact support if issue persists
+* **Camera Preview is Black:** Try restarting the device. If the problem persists, contact support.
 
-### Image Quality Issues
-
-- Clean lens
-- Check lighting conditions
-- Verify proper positioning
-
-### Connectivity Problems
-
-- Check Wi-Fi settings
-- Restart device
-- Verify network availability
+* **Device Unresponsive:** Press and hold the Top hardware button for 10 seconds to force a restart.
 
 ---
 
-*For additional support, contact support@oraleye.ai*
+*For routine maintenance procedures, see [Maintenance](maintenance.qmd). For operating instructions, see [Operation Guide](operation.qmd).*

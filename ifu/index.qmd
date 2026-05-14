@@ -2,49 +2,33 @@
 title: "Instructions For Use"
 ---
 
-# OralEye Instructions For Use
+# OralEye™ Imaging System - Instructions For Use (IFU)
 
-Welcome to the OralEye Instructions For Use documentation. This guide provides comprehensive information about the safe and effective use of the OralEye Intraoral Imaging System.
+**Document Version:** V2.2  
+**Date:** November 4, 2025
 
-## Quick Navigation
+Welcome to the OralEye Instructions For Use documentation. This guide provides comprehensive information about the safe and effective use of the OralEye™ Imaging System for dental professionals.
 
-### Getting Started
-- [Overview and Quick Start](overview.qmd) - Introduction and basic setup
-- [Intended Use](intended-use.qmd) - Device classification and indications
-- [Device Description](device-description.qmd) - System components and features
+## Introduction
 
-### Safety & Operation
-- [Safety Information](safety.qmd) - Important safety instructions
-- [Operation Guide](operation.qmd) - Step-by-step operating procedures
-- [Maintenance](maintenance.qmd) - Cleaning and calibration
+The OralEye™ Imaging System is an extraoral digital camera intended for use by dental professionals to capture, display, and store high-contrast reflectance and fluorescence images of the oral cavity. The system provides a standardized "visual ledger" for:
 
-### Support
-- [Troubleshooting](troubleshooting.qmd) - Common issues and solutions
-- [Technical Specifications](technical-specs.qmd) - Detailed specifications
-
-## Document Information
-
-::: {.callout-note}
-## Current Version
-**Version:** 1.0.0  
-**Effective Date:** TBD  
-**Document Number:** IFU-001
-:::
-
-## Important Notice
+- **Clinical Documentation:** Creating a permanent digital record of visible oral tissues during routine dental imaging sessions
+- **Longitudinal Monitoring:** Providing repeatable, standardized images to track the appearance of visible anomalies over time
+- **Medical Communication:** Facilitating the secure transfer of encrypted digital records to specialists for professional consultation and referral (Product Code LMD)
 
 ::: {.callout-important}
-Read all instructions before using the OralEye system. Keep this document accessible for reference.
+## Important Note
+The OralEye™ is not intended for the standalone detection of oral cancer, the diagnosis of occult pathology, or the determination of surgical margins.
 :::
 
 ## Support Contact
 
-For technical support or questions:
-
-- **Email:** support@oraleye.ai
-- **Web:** https://oraleye.ai
-- **Phone:** (Contact information TBD)
+**Image Data Management, LLC**  
+445 March Avenue, Suite A  
+Healdsburg, CA 95448  
+Email: [oraleye@imagedatamanagement.com](mailto:oraleye@imagedatamanagement.com)
 
 ---
 
-*This document is maintained under version control. For regulatory information, see the [Regulatory section](../regulatory/index.qmd).*
+*This document is maintained under ISO 13485:2016 quality management system. For regulatory information, see the [Regulatory section](../regulatory/index.qmd).*

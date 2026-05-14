@@ -2,88 +2,41 @@
 title: "Safety Information"
 ---
 
-# Safety Information
 
-## Important Safety Instructions
+## Warnings and precautions
+
+Users are provided with these general warnings and precautions.
 
 ::: {.callout-important}
-## Critical Safety Information
-Read and understand all safety information before using the OralEye system. Failure to follow these instructions may result in injury or device damage.
+## For professional use only
+This device is to be operated only by trained clinicians.
 :::
 
-## General Warnings
+::: {.callout-note}
+## Patient safety
+Use appropriate infection control measures. The device should be sanitized between documentation sessions.
+:::
 
-### ⚠️ Electrical Safety
-
-- Use only the provided power adapter
-- Do not expose the device to liquids
-- Disconnect power before cleaning
-- Do not use if power cord is damaged
-
-### ⚠️ Patient Safety
-
-- Ensure patient comfort during imaging procedures
-- Avoid prolonged LED exposure to eyes
-- Use appropriate infection control procedures
-- Follow standard precautions for patient contact
-
-### ⚠️ Optical Safety
-
-- LED light source is safe for intended use
-- Do not stare directly into LED array
-- Automatic exposure control prevents overexposure
-
-## Infection Control
-
-### Required Procedures
-
-1. **Barrier Protection:** Use disposable barriers for intraoral components
-2. **Surface Disinfection:** Clean all surfaces with approved disinfectant after each patient
-3. **Hand Hygiene:** Follow standard hand hygiene protocols
-
-### Approved Disinfectants
-
-- Isopropyl alcohol (70%)
-- EPA-registered hospital-grade disinfectants
-- Follow manufacturer's contact time recommendations
+::: {.callout-danger}
+## Avoid direct eye exposure.
+The device uses a Class 1 low-power aiming laser diode (520 nm). Do not aim the laser beam at the eyes of patients or clinicians. Do not stare directly into the laser beam or point it at anyone’s eyes.
+:::
 
 ::: {.callout-warning}
-Do not autoclave or immerse device in liquid. Do not use abrasive cleaners.
+## Goggles
+The OralEye™ Imaging System complies with international safety standards for light emission. However, users should avoid looking directly into the blue light while it is operating. To reduce discomfort and the risk of eye injury, patients are provided with protective goggles similar to those used with composite curing lights, and these should be worn by the patient during use**.**
 :::
 
-## Environmental Conditions
+::: {.callout-warning}
+## Battery
+Only charge the device with the supplied power adapter. Do not attempt to service the battery.
+:::
 
-### Operating Environment
-
-- **Temperature:** 15°C to 30°C (59°F to 86°F)
-- **Humidity:** 30% to 75% relative humidity
-- **Pressure:** 700 hPa to 1060 hPa
-
-### Storage Environment
-
-- **Temperature:** -10°C to 50°C (14°F to 122°F)
-- **Humidity:** 10% to 90% relative humidity (non-condensing)
-
-## Disposal
-
-### End of Life
-
-- Do not dispose of device in regular waste
-- Follow local regulations for electronic waste disposal
-- Contact manufacturer for recycling options
-
-### Battery Disposal
-
-- Lithium-ion batteries must be recycled according to local regulations
-- Contact local waste management for battery recycling
-
-## Reporting
-
-Report adverse events or device problems to:
-
-- **Manufacturer:** support@oraleye.ai
-- **FDA:** via MedWatch (1-800-FDA-1088)
+::: {.callout-note}
+## Environment
+Use the device in a controlled environment. Avoid exposure to excessive moisture, heat, or dust.
+:::
 
 ---
 
-*This safety information is current as of the document effective date.*
+*For operating procedures, see [Operation Guide](operation.qmd).*

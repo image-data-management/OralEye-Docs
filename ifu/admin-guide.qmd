@@ -1,0 +1,45 @@
+---
+title: "Administrator Guide"
+---
+
+## Administrator Privileges
+
+## Administrator Registration
+
+Each clinical facility designates an **OralEye Administrator** (see Administrator Guide). This individual is assigned a privileged account on the OralEye web portal, and their profile is registered for use with the OralEye device.
+
+The web portal securely stores the administrator’s and all users’ profile information. By choosing the profile page, the user sets their personal PIN for device access.  They can also generate a QR code that will enable the device to join the local WiFi network.
+
+## Clinics
+
+Users possessing administrative privileges can establish **Clinics** within the OralEye web portal.  They also have the right to add users to their clinic.
+
+Clinics are groups of users.  Membership in a clinic is designed to facilitate organizational or workflow management and may be created for various purposes, such as segmenting patients seen by a specific dental assistant, clinician, or organizational unit.
+
+## Patient Management
+
+Through the OralEye web portal, authorized users can add patients and manage the patient’s clinical record.
+
+During patient registration, the user enters the patient-specific information and then assigns the patient to one of the user's established **Clinics**.  The collection of patients for any clinic can be viewed from the **Patient Management** page.
+
+## Digital Record Access
+
+The captured reflectance and fluorescence **records** are available for review on the OralEye secure web portal. The user is presented with a list of **documentation sessions** that they can access.
+
+Clinicians can view the **captured data** from a specific **session** by selecting the corresponding entry in the list. The **records** are displayed for review as a standardized data set.
+
+Selecting any of the images will bring up a larger, higher resolution view of that image.  
+
+Using the arrows on the image, the user can scroll through the reflectance and fluorescence images in a high resolution view.
+
+## Backend Database
+
+User, patient, documentation sessions, and device information are stored securely in the Firestore database platform managed by Google.
+
+This database is only available to qualified administrative personnel at Image Data Management, and even they rarely use it directly.  Nearly all interactions are made using the API, written in Javascript (web) or Python (app).
+
+The Firestore data management system securely stores the data and keeps a complete audit trail.
+
+---
+
+*For device operation, see [Operation Guide](operation.qmd). For safety information, see [Safety Information](safety.qmd).*
